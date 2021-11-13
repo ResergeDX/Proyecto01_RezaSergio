@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Proyecto1</string>
+    <string name="title">Ingresa los datos solicitados</string>
+    <string name="nameUser">Nombre: </string>
+    <string name="birthdayUser">Fecha \n de nacimiento: </string>
+    <string name="AccNumberUser">Número de cuenta:</string>
+    <string name="emailUser">Correo:</string>
+    <string name="submit">Enviar</string>
+    <string name="greetUser">Hola</string>
+    <string name="ageUser">Edad: </string>
+    <string name="Zodiac">Signo del Zodiaco Chino: </string>
+
+</resources>

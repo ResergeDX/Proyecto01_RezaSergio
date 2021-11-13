@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Proyecto1</string>
+    <string name="nameUser">Name:</string>
+    <string name="birthdayUser">Birthday:</string>
+    <string name="AccNumberUser">Account Number:</string>
+    <string name="emailUser">Email:</string>
+    <string name="submit">Submit</string>
+    <string name="title">Enter the requested data</string>
+    <string name="greetUser">Hello</string>
+    <string name="ageUser">Age:</string>
+    <string name="Zodiac">Chinese Zodiac Sign:</string>
+</resources>
