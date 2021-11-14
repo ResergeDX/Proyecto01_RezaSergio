@@ -21,10 +21,14 @@
     <string name="wrAccount">9 dígitos</string>
     <string name="wrEmail">emailname@email.com</string>
     <string name="ToastName">Por favor Ingresa un nombre</string>
-    <string name="ToastEmail">Ingrese un correo correcto</string>
-    <string name="ToastBirth">Fecha Inválida</string>
-    <string name="ToastAccount">Número de cuenta invalido</string>
+    <string name="ToastEmail">Ingrese un correo</string>
+    <string name="ToastEmailValid">Ingrese un correo correcto</string>
+    <string name="ToastBirth">Ingrese una fecha</string>
+    <string name="ToastBirthValid">Ingrese una fecha valida</string>
+    <string name="ToastAccount">Ingrese un número de cuenta</string>
+    <string name="ToastAccountLength">Ingrese un número de cuenta con 9 digitos</string>
     <string name="BirthFormat">%1$d/%2$d/%3$d</string>
+    <string name="InforVerify">Por favor, revise su información</string>
 
     <string name="ZodiacMonkey">Mono</string>
     <string name="ZodiacRooster">Gallo</string>

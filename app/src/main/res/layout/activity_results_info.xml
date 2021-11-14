@@ -32,7 +32,7 @@
         android:text="@string/greetUser"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="20sp"
+        android:textSize="48sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -64,8 +64,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.85"
+        app:layout_constraintTop_toBottomOf="@+id/tvZodiac"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
@@ -106,6 +105,7 @@
         android:id="@+id/tvZodiac"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/ccantrial"
         android:textAlignment="center"
         android:textColor="@android:color/background_dark"
         android:textSize="20sp"
@@ -114,7 +114,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.65"
+        app:layout_constraintVertical_bias="0.6"
         tools:text="@string/Zsign" />
 
     <TextView
@@ -138,6 +138,7 @@
         android:id="@+id/idZodiacSign"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/ccantrial"
         android:text="@string/Zodiac"
         android:textAlignment="center"
         android:textColor="@android:color/background_dark"
@@ -148,7 +149,7 @@
         app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.59000003" />
+        app:layout_constraintVertical_bias="0.55" />
 
     <TextView
         android:id="@+id/tvCuenta"
@@ -175,11 +176,11 @@
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@android:color/background_dark"
-        android:textSize="20sp"
+        android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.885"
+        app:layout_constraintHorizontal_bias="0.812"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.251"

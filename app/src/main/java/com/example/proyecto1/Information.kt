@@ -10,12 +10,22 @@ import android.widget.EditText
 import android.widget.Toast
 import java.text.SimpleDateFormat
 import java.util.*
+import java.util.regex.Pattern
 
 class Information : AppCompatActivity() {
     private lateinit var etNombre: EditText
     private lateinit var etBirth: EditText
     private lateinit var etAccount: EditText
     private lateinit var etEmail: EditText
+    val EMAIL_ADDRESS_PATTERN = Pattern.compile(
+        "[a-zA-Z0-9\\+\\.\\_\\%\\-\\+]{1,256}" +
+                "\\@" +
+                "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,64}" +
+                "(" +
+                "\\." +
+                "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,25}" +
+                ")+"
+    )
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_information)
@@ -27,6 +37,7 @@ class Information : AppCompatActivity() {
             showDatePickerDialog()
         }
 
+
     }
     private fun showDatePickerDialog(){
         val datePicker=DatePickerFragment{day,month,year -> onDateSelected(day,month,year)}
@@ -37,37 +48,83 @@ class Information : AppCompatActivity() {
         etBirth.setText(getString(R.string.BirthFormat,day,month,year))
 
     }
+    fun validEmail(email:String):Boolean{
+        return EMAIL_ADDRESS_PATTERN.matcher(email).matches()
+    }
 
-    fun verify_Name(name:EditText): Boolean{
-        if (name.text.toString()!="") {
+    fun verifyInfo(): Boolean {
+        var checkName:Boolean
+        var checkBirth:Boolean
+        var checkAccount:Boolean
+        var checkEmail:Boolean
+        //Revisión del nombre
+        if (etNombre.text.toString() != "") {
+            checkName=true
+        } else {
+            etNombre.error=getString(R.string.ToastName)
+            checkName=false
+        }
+        //Revisión de la fecha de nacimiento
+        if(etBirth.text.toString()!=""){
+            //Revisión de fecha anterior al dia actual
+            var fechaDate=SimpleDateFormat("dd/MM/yyyy").parse(etBirth.text.toString())
+            var fechaActual=Date(System.currentTimeMillis())
+            var dif=fechaActual.time-fechaDate.time
+            if(dif>0){
+                checkBirth=true
+            }else{
+                etBirth.error=getString(R.string.ToastBirth)
+                checkBirth=false
+            }
+
+        }else{
+            etBirth.error=getString(R.string.ToastBirth)
+            checkBirth=false
+        }
+        //Revisa si existe numero de cuenta
+        if (etAccount.text.toString()!=""){
+            //Revisa si hay 9 digitos en el número de cuenta
+            if(etAccount.text.toString().length==9){
+                checkAccount=true
+            }else{
+                etAccount.error= getString(R.string.ToastAccountLength)
+                checkAccount=false
+            }
+        }else{
+            etAccount.error=getString(R.string.ToastAccount)
+            checkAccount=false
+        }
+        //Revisa si hay correo
+        if(etEmail.text.toString()!=""){
+            //Revisa el formato de correo
+            if(validEmail(etEmail.text.toString())){
+                checkEmail=true
+            }else{
+                etEmail.error=getString(R.string.ToastEmailValid)
+                checkEmail=false
+            }
+        }else{
+            etEmail.error= getString(R.string.ToastEmail)
+            checkEmail=false
+        }
+        //Revisión de los 4 puntos
+        if((checkName)and(checkAccount)and(checkBirth)and(checkEmail)){
             return true
-        }else{
-            Toast.makeText(this, getString(R.string.ToastName) ,Toast.LENGTH_LONG).show()
-
-            return false
         }
-    }
-    fun verify_Account(accountNumber: EditText):Boolean{
-        if(Integer.parseInt(accountNumber.text.toString())>0){
-           return true
-        }else{
-            Toast.makeText(this, getString(R.string.ToastAccount),Toast.LENGTH_LONG).show()
+        return false
 
-            return false
-        }
     }
-
-    //fun verify_birth():Boolean{}
-    //fun verify_Email():Boolean{}
+    //Obtención de indice para el signo del zodiaco chino
     fun obtain_Zodiac_Sign(dateBirth:String):Int{
         var fechaDate=SimpleDateFormat("dd/MM/yyyy").parse(dateBirth)
         var datosFecha=fechaDate.toString()
         val info=datosFecha.split(" ")
         Log.i("InfoFecha",info[5])
-        var year=Integer.parseInt(info[5].toString())
+        var year=Integer.parseInt(info[5])
         var horoscopo=(year%12)+1
         return horoscopo
     }
+    //Obtención de la edad por conversion de mili segundos a años
     fun obtainAge(dateBirth:String): Long{
         var fechaDate=SimpleDateFormat("dd/MM/yyyy").parse(dateBirth)
 
@@ -85,14 +142,8 @@ class Information : AppCompatActivity() {
     }
 
     fun revisarInfo(view: View) {
-        var boolName:Boolean=verify_Name(etNombre)
-        var boolAccount:Boolean=verify_Account(etAccount)
-        var boolBirth:Boolean=true
-        var boolEmail:Boolean=true
-
-        val birthday = etBirth.text.toString()
-        val email = etEmail.text.toString()
-        if((boolName==true)and(boolAccount==true)and(boolBirth==true)and(boolEmail==true)) {
+        //Si la información es correcta se enviará la información a la actividad de resultados
+        if(verifyInfo()) {
             val intent = Intent(this, Results_Info::class.java)
             val param=Bundle()
             param.putString("Nombre",etNombre.text.toString())
@@ -104,7 +155,7 @@ class Information : AppCompatActivity() {
             intent.putExtras(param)
             startActivity(intent)
         }else{
-            Toast.makeText(this, getString(R.string.ToastAccount),Toast.LENGTH_LONG).show()
+            Toast.makeText(this, getString(R.string.InforVerify),Toast.LENGTH_LONG).show()
         }
 
 

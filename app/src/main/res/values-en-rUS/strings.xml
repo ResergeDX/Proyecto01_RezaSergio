@@ -22,7 +22,7 @@
     <string name="wrEmail">emailname@email.com</string>
     <string name="ToastName">Please, Enter your name</string>
     <string name="ToastEmail">Enter an email witha correct format</string>
-    <string name="ToastBirth">Invalid Date</string>
+    <string name="ToastBirth">Enter a date</string>
     <string name="ToastAccount">Invalid Account Number</string>
     <string name="BirthFormat">%1$d/%2$d/%3$d</string>
     <string name="ZodiacMonkey">Monkey</string>
@@ -38,4 +38,8 @@
     <string name="ZodiacHorse">Horse</string>
     <string name="ZodiacGoat">Goat</string>
     <string name="Age1Space">1 year old</string>
+    <string name="ToastBirthValid">Invalid Date</string>
+    <string name="ToastAccountLength">Enter a 9-digit account number</string>
+    <string name="ToastEmailValid">Enter a valid email</string>
+    <string name="InforVerify">Please, check your information</string>
 </resources>
