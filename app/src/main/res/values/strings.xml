@@ -6,8 +6,21 @@
     <string name="AccNumberUser">Número de cuenta:</string>
     <string name="emailUser">Correo:</string>
     <string name="submit">Enviar</string>
-    <string name="greetUser">Hola</string>
+    <string name="greetUser">¡Hola $s !</string>
     <string name="ageUser">Edad: </string>
     <string name="Zodiac">Signo del Zodiaco Chino: </string>
-
+    <string name="Zsign">Signo Obtenido</string>
+    <string name="NameSpace">Nombre</string>
+    <string name="AccountSpace">000000000</string>
+    <string name="EmailSpace">Correo</string>
+    <string name="BirthSpace">01/01/2000</string>
+    <string name="AgeSpace">00 años</string>
+    <string name="wrName">Escribe tu nombre</string>
+    <string name="wrBirth">Fecha de nacimiento</string>
+    <string name="wrAccount">9 dígitos</string>
+    <string name="wrEmail">emailname@email.com</string>
+    <string name="ToastName">Por favor Ingresa un nombre</string>
+    <string name="ToastEmail">Ingrese un correo correcto</string>
+    <string name="ToastBirth">Fecha Inválida</string>
+    <string name="ToastAccount">Número de cuenta invalido</string>
 </resources>
