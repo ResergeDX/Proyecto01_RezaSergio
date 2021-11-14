@@ -7,14 +7,14 @@
     <string name="emailUser">Email:</string>
     <string name="submit">Submit</string>
     <string name="title">Enter the requested data</string>
-    <string name="greetUser">Hello $s !</string>
+    <string name="greetUser">Hello %s !</string>
     <string name="ageUser">Age:</string>
     <string name="Zodiac">Chinese Zodiac Sign:</string>
     <string name="Zsign">Obtained Sign</string>
     <string name="NameSpace">Name</string>
     <string name="EmailSpace">Email</string>
     <string name="BirthSpace">01/01/2000</string>
-    <string name="AgeSpace">00 years old</string>
+    <string name="AgeSpace">%d years old</string>
     <string name="AccountSpace">000000000</string>
     <string name="wrName">Write your First Name</string>
     <string name="wrBirth">Enter your Birthday</string>
@@ -24,4 +24,18 @@
     <string name="ToastEmail">Enter an email witha correct format</string>
     <string name="ToastBirth">Invalid Date</string>
     <string name="ToastAccount">Invalid Account Number</string>
+    <string name="BirthFormat">%1$d/%2$d/%3$d</string>
+    <string name="ZodiacMonkey">Monkey</string>
+    <string name="ZodiacRooster">Rooster</string>
+    <string name="ZodiacDog">Dog</string>
+    <string name="ZodiacPig">Pig</string>
+    <string name="ZodiacRat">Rat</string>
+    <string name="ZodiacOx">Ox</string>
+    <string name="ZodiacTiger">Tiger</string>
+    <string name="ZodiacRabbit">Rabbit</string>
+    <string name="ZodiacDragon">Dragon</string>
+    <string name="ZodiacSnake">Snake</string>
+    <string name="ZodiacHorse">Horse</string>
+    <string name="ZodiacGoat">Goat</string>
+    <string name="Age1Space">1 year old</string>
 </resources>

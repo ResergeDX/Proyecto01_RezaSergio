@@ -8,7 +8,7 @@
     tools:context=".Results_Info">
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/tvYears"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/ccantrial"
@@ -58,7 +58,7 @@
         app:layout_constraintVertical_bias="0.15" />
 
     <ImageView
-        android:id="@+id/idZodiacAnimal"
+        android:id="@+id/ivZodiacAnimal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -103,7 +103,7 @@
         app:layout_constraintVertical_bias="0.35" />
 
     <TextView
-        android:id="@+id/idZodiac"
+        android:id="@+id/tvZodiac"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAlignment="center"
@@ -151,7 +151,7 @@
         app:layout_constraintVertical_bias="0.59000003" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tvCuenta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/ccantrial"
@@ -168,24 +168,25 @@
         tools:text="@string/AccountSpace" />
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="123dp"
-        android:layout_height="35dp"
+        android:id="@+id/tvCorreo"
+        android:layout_width="192dp"
+        android:layout_height="32dp"
         android:fontFamily="@font/ccantrial"
         android:textAlignment="center"
+        android:textAllCaps="false"
         android:textColor="@android:color/background_dark"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintHorizontal_bias="0.885"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.25"
-        tools:text="@string/BirthSpace" />
+        app:layout_constraintVertical_bias="0.251"
+        tools:text="@string/EmailSpace" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/tvDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/ccantrial"

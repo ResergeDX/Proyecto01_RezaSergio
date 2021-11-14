@@ -6,7 +6,7 @@
     <string name="AccNumberUser">Número de cuenta:</string>
     <string name="emailUser">Correo:</string>
     <string name="submit">Enviar</string>
-    <string name="greetUser">¡Hola $s !</string>
+    <string name="greetUser">¡Hola %s !</string>
     <string name="ageUser">Edad: </string>
     <string name="Zodiac">Signo del Zodiaco Chino: </string>
     <string name="Zsign">Signo Obtenido</string>
@@ -14,7 +14,8 @@
     <string name="AccountSpace">000000000</string>
     <string name="EmailSpace">Correo</string>
     <string name="BirthSpace">01/01/2000</string>
-    <string name="AgeSpace">00 años</string>
+    <string name="AgeSpace">%d años</string>
+    <string name="Age1Space">1 año</string>
     <string name="wrName">Escribe tu nombre</string>
     <string name="wrBirth">Fecha de nacimiento</string>
     <string name="wrAccount">9 dígitos</string>
@@ -23,4 +24,18 @@
     <string name="ToastEmail">Ingrese un correo correcto</string>
     <string name="ToastBirth">Fecha Inválida</string>
     <string name="ToastAccount">Número de cuenta invalido</string>
+    <string name="BirthFormat">%1$d/%2$d/%3$d</string>
+
+    <string name="ZodiacMonkey">Mono</string>
+    <string name="ZodiacRooster">Gallo</string>
+    <string name="ZodiacDog">Perro</string>
+    <string name="ZodiacPig">Cerdo</string>
+    <string name="ZodiacRat">Rata</string>
+    <string name="ZodiacOx">Buey</string>
+    <string name="ZodiacTiger">Tigre</string>
+    <string name="ZodiacRabbit">Conejo</string>
+    <string name="ZodiacDragon">Dragón</string>
+    <string name="ZodiacSnake">Serpiente</string>
+    <string name="ZodiacHorse">Caballo</string>
+    <string name="ZodiacGoat">Cabra</string>
 </resources>
